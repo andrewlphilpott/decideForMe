@@ -1,0 +1,58 @@
+label {
+	color: lighten($black, 60%);
+	font-weight: 900;
+	display: block;
+	margin-bottom: .5em;
+	text-transform: uppercase;
+	@extend %real-small;
+}
+input {
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 2px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+	margin-bottom: 1em;
+
+	&[type=text] {
+		height: 2em;
+		padding: 0 .625em;
+		width: 100%;
+	}
+	&[type=range] {
+			-webkit-appearance: none;
+		background-color: $white;
+		box-shadow: inset 0 1px 2px rgba(0, 0, 0, .125);
+		height: 10px;
+		margin: 10px 0 2em;
+
+		&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+			@include linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+			background-color: darken($tan, 2.5%);
+			border: 1px solid darken($tan, 5%);
+			border-radius: 2px;
+			height: 30px;
+			width: 20px;
+		}
+	}
+
+	&:focus {
+		box-shadow: 0 0 3px transparentize($green, .75);
+		outline: none;
+	}
+}
+button {
+	background: $green;
+	border: none;
+	border-radius: 2px;
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	line-height: 1em;
+	letter-spacing: 1px;
+	padding: 1em 1em;
+	text-transform: uppercase;
+
+	&:hover {
+		background: darken($green, 5%);
+	}
+}
