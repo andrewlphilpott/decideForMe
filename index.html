@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Decide For Me</title>
+
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,900,400italic,900italic" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/screen.css" media="screen" />
+
+		<link href="/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body id="home" data-page="home">
+
+		<!-- Header -->
+			<h1 class="page-title" contenteditable>List Name</h1>
+
+	<section id="pros" class="chart-section">
+		<h2 class="section-title">The Pros</h2>
+
+		<ul class="item-list"></ul>
+
+		<form id="pro-form" class="add-form">
+			<label for="pro">New Pro</label>
+			<input type="text" name="item" id="pro" />
+
+			<label for="pro-weight">Weight</label>
+			<input type="range" name="weight" id="pro-weight" min="1" max="5" value="1" />
+			<output id="pro-weight-output" for="pro-weight">1</output>
+
+			<button type="submit">Add Pro</button>
+		</form>
+	</section><!-- /#pros -->
+
+	<section id="cons" class="chart-section">
+		<h2 class="section-title">The Cons</h2>
+
+		<ul class="item-list"></ul>
+
+		<form id="con-form" class="add-form">
+			<label for="con">New Con</label>
+			<input type="text" name="item" id="con" />
+
+			<label for="con-weight">Weight</label>
+			<input type="range" name="weight" id="con-weight" min="1" max="5" value="1" />
+			<output id="con-weight-output" for="con-weight">1</output>
+
+			<button type="submit">Add Con</button>
+		</form>
+	</section><!-- /#cons -->
+
+	<section id="result">
+		<output class="result pro"></output>
+		<output class="result con"></output>
+		<strong class="decision"></strong>
+	</section>
+
+	<button class="delete-list">Delete This List</button>
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/lib/jquery.min.js"><\/script>')</script>
+<script type="text/javascript" src="/assets/js/plugins.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+
+<!-- Remove this for production -->
+<script src='//localhost:3000/socket.io/socket.io.js'></script>
+<script>var ___socket___ = io.connect('http://localhost:3000');</script>
+<script src='//localhost:3001/client/browser-sync-client.0.6.2.js'></script>
+
+	</body>
+</html>

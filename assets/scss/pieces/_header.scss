@@ -1,0 +1,10 @@
+/* Example of how media queries are used
+.footer-nav {
+	width: 100%;
+	@extend %float-left;
+	
+	@media screen and (min-width: 55em) {
+		width: 49%;
+	}
+}
+*/

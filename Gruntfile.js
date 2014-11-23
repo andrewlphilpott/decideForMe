@@ -4,9 +4,9 @@ module.exports = function(grunt) {
 	// 1. All configuration goes here
 	grunt.initConfig({
 		config: {
-			host: 'yoursite.dev',
+			host: 'de.cidefor.dev',
 			src: 'src',
-			dest: 'public'
+			dest: ''
 		},
 		pkg: grunt.file.readJSON('package.json'),
 		bower: {
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
 							'!assets/js/lib/**',
 							'assets/js/lib/*.min.js'
 						],
-						dest: '<%= config.dest %>/',
+						dest: '<%= config.dest %>',
 						expand: true,
 						filter: 'isFile'
 					}
@@ -128,7 +128,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: '<%= config.src %>',
 						src: ['**/*.html','!layouts/*.html','!partials/*.html'],
-						dest: '<%= config.dest %>/build',
+						dest: '<%= config.dest %>',
 						ext: '.html'
 					}
 				]
