@@ -1,0 +1,52 @@
+{% extends 'layouts/default' %}
+
+{% set title     = 'Decide For Me' %}
+{% set home      = 'true'    %}
+{% set id        = 'home'    %}
+{% set data_page = 'home'    %}
+
+{% block body %}
+	<h1 class="page-title" contenteditable>List Name</h1>
+
+	<section id="pros" class="chart-section">
+		<h2 class="section-title">The Pros</h2>
+
+		<ul class="item-list"></ul>
+
+		<form id="pro-form" class="add-form">
+			<label for="pro">New Pro</label>
+			<input type="text" name="item" id="pro" />
+
+			<label for="pro-weight">Weight</label>
+			<input type="range" name="weight" id="pro-weight" min="1" max="5" value="1" />
+			<output id="pro-weight-output" for="pro-weight">1</output>
+
+			<button type="submit">Add Pro</button>
+		</form>
+	</section><!-- /#pros -->
+
+	<section id="cons" class="chart-section">
+		<h2 class="section-title">The Cons</h2>
+
+		<ul class="item-list"></ul>
+
+		<form id="con-form" class="add-form">
+			<label for="con">New Con</label>
+			<input type="text" name="item" id="con" />
+
+			<label for="con-weight">Weight</label>
+			<input type="range" name="weight" id="con-weight" min="1" max="5" value="1" />
+			<output id="con-weight-output" for="con-weight">1</output>
+
+			<button type="submit">Add Con</button>
+		</form>
+	</section><!-- /#cons -->
+
+	<section id="result">
+		<output class="result pro"></output>
+		<output class="result con"></output>
+		<strong class="decision"></strong>
+	</section>
+
+	<button class="delete-list">Delete This List</button>
+{% endblock %}

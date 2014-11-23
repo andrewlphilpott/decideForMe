@@ -1,0 +1,155 @@
+/*-------------------------------------------
+  Intro
+-------------------------------------------*/
+.page-title {
+	border-bottom: 1px dashed transparent;
+	font-weight: 900;
+	text-align: center;
+
+	&:focus {
+		border-bottom-color: rgba(0, 0, 0, .1);
+		outline: none;
+	}
+}
+
+/*-------------------------------------------
+  Pro/Con Sections
+-------------------------------------------*/
+.chart-section {
+	background: $white;
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .025);
+	margin-bottom: 2.5em;
+	padding: 0 1.25em 1.25em;
+	width: 100%;
+	@extend %float-l;
+
+	+ .chart-section {
+		@extend %float-r;
+	}
+
+	@include min-up(em(640)) {
+		width: calc(50% - .625em);
+	}
+}
+.section-title {
+	color: lighten($black, 60%);
+	font-weight: 900;
+	text-align: center;
+}
+
+// Item Lists
+.item-list {
+	border-top: 1px solid rgba(0, 0, 0, .1);
+	margin-bottom: 2em;
+	@extend %list-reset;
+
+	li {
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+		padding: .5em 2.5em .5em 0;
+		position: relative;
+	}
+}
+.weight {
+	color: lighten($black, 60%);
+	margin-left: .5em;
+	@extend %small;
+
+	&:before {
+		content: '(';
+	}
+	&:after {
+		content: ')';
+	}
+}
+.delete-btn {
+	background: none;
+	border: none;
+	color: $white;
+	height: 1.875em;
+	line-height: 1.875em;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	@include transform(translateY(-53%));
+	width: 1.875em;
+
+	&:before {
+		color: $red;
+		content: '✖';
+		display: inline-block;
+	}
+
+	&:hover {
+		background: none;
+
+		&:before {
+			color: darken($red, 20%);
+		}
+	}
+}
+
+// Add Form
+.add-form {
+	input[type=range] {
+		width: 85%;
+	}
+	output {
+		display: inline-block;
+		margin-left: -5px;
+		text-align: right;
+		width: 15%;
+		@extend %small;
+	}
+	button {
+		width: 100%;
+		@extend %small;
+	}
+}
+
+/*-------------------------------------------
+  Result
+-------------------------------------------*/
+#result {
+	clear: both;
+	text-align: center;
+}
+.result {
+	display: inline-block;
+	font-weight: 900;
+	margin-bottom: .25em;
+	@extend %h2;
+
+	&.pro {
+		color: desaturate($green, 20%);
+
+		&:after {
+			color: $black;
+			content: ' vs';
+			@extend %small;
+		}
+	}
+	&.con {
+		color: desaturate($red, 20%);
+	}
+}
+.decision {
+	display: block;
+}
+
+/*-------------------------------------------
+  Delete
+-------------------------------------------*/
+.delete-list {
+	background: $red;
+	display: block;
+	margin: 4em auto;
+	width: 100%;
+	@extend %small;
+
+	&:hover {
+		background: darken($red, 20%);
+	}
+}

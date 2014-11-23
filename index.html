@@ -8,15 +8,14 @@
 		<title>Decide For Me</title>
 
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,900,400italic,900italic" />
-		<link rel="stylesheet" type="text/css" href="assets/css/screen.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/screen.css" media="screen" />
 
-		<link href="assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link href="/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body id="home" data-page="home">
 
-		<!-- Header -->
 			<h1 class="page-title" contenteditable>List Name</h1>
 
 	<section id="pros" class="chart-section">
@@ -61,7 +60,12 @@
 
 	<button class="delete-list">Delete This List</button>
 
-<script type="text/javascript" src="assets/js/main.js"></script>
+		<script type="text/javascript" src="/assets/js/main.js"></script>
+
+<!-- Remove this for production -->
+<script src='//localhost:3000/socket.io/socket.io.js'></script>
+<script>var ___socket___ = io.connect('http://localhost:3000');</script>
+<script src='//localhost:3001/client/browser-sync-client.0.6.2.js'></script>
 
 	</body>
 </html>
