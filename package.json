@@ -1,0 +1,19 @@
+{
+  "name": "mighty",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-bower": "latest",
+    "node-bourbon": "latest",
+    "grunt-newer": "latest",
+    "load-grunt-tasks": "latest",
+    "grunt-output-twig": "latest",
+    "grunt-browser-sync": "~0.6.2"
+  }
+}
